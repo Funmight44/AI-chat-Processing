@@ -1,0 +1,127 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 100%;
+    min-height: 100vh;
+}
+
+.container{
+    width: 80%;
+    margin: 40px auto;
+    box-shadow: 0 3px 8px  rgba(0, 0, 0, 0.24);
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.chatInterface{
+    width: 60%;
+    margin: auto;
+}
+
+.chatInterface h1{
+    text-align: center;
+    font-weight: 800;
+    margin: 20px 0;
+}
+
+.chatInterface .chatBox{
+    width: 100%;
+    height:300px;
+    background-color:#fff;
+    color: #fff;
+    box-shadow: 0 3px 8px  rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.detectLang{
+    margin:10px ;
+}
+
+.chatInterface .chatBoxCont{
+    width: 100%;
+    height:200px;
+    overflow: scroll;
+    background-color: #777;
+    color: #ffff;
+    box-shadow: 0 3px 8px  rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+    padding: 10px;
+    line-height: 1.5;
+    margin: 10px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.buttons button, .info button{
+    background-color: #666;
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: white;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transform: all ease 0.5s;
+}
+
+.buttons button:hover{
+    transform: scale(1.1);
+    background-color: grey;
+}
+
+.buttons select{
+    padding: 5px 10px;
+    border-radius: 10px;
+    outline: none;
+}
+
+
+.textInput{
+    width: 60%;
+    margin: 20px auto;
+}
+
+.textInput textarea{
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 3px 8px  rgba(0, 0, 0, 0.24);
+    border-radius: 20px;
+    padding: 10px;
+    outline: none;
+}
+
+.textInput .send{
+    padding: 5px 8px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+
+.input-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media(max-width:700px){
+    .buttons{
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+}
