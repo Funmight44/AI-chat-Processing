@@ -5,17 +5,16 @@ const ChatInterFace = ({ infos, summarize, translate, detectedLang, error, loadi
  
   return (
     <div className="chatInterface">
-      <h1>AI Text Processor</h1>
-
+     
       {infos.map((info, index) => (
         <div key={index} className={`info ${info.type}`}>
-          {loading && <p>Loading.....</p>}
+          {loading && <p className="loading">Loading.....</p>}
           {/* Display summarized text if available, otherwise show original text */}
           <p className="chatBoxCont">{info.summarized ? info.text : info.text || ""}</p>
           
           {/* Summarization button */}
           {info.type === "user" && info.text && info.text.length > 150 && !info.summarized && (
-            <button onClick={() => summarize(info.text)} disabled={!info.text.trim()}>
+            <button className="summaryBtn" onClick={() => summarize(info.text)} disabled={!info.text.trim()}>
               Summarize
             </button>
           )}
@@ -39,7 +38,7 @@ const ChatInterFace = ({ infos, summarize, translate, detectedLang, error, loadi
                 <option value="es">Spanish</option>
               </select>
 
-              <button
+              <button className="translateBtn"
                 onClick={() => translate(info.text, detectedLang, selectedLanguages[info.id] || "en")}
                 disabled={!info.text || !selectedLanguages[info.id]}
               >

@@ -4,19 +4,17 @@ const Text = ({ inputText, setInputText, handleSendInfo }) => {
   const [charCount, setCharCount] = useState(inputText.length);
 
   const handleChange = (e) => {
-    
     const text = e.target.value;
     setInputText(text)
     setCharCount(text.length);
   };
 
-  // Handle Enter key submission
-  // function handleKeyPress(e){
-  //   e.preventDefault()
-  //   if(e.key === "enter" && !e.shiftKey){
-  //       handleSendInfo()
-  //   }
-  // }
+ // Handle Enter key submission
+  function handleKeyPress(e){
+    if(e.key === "enter"){
+        handleSendInfo()
+    }
+  }
 
   return (
     <div className="textInput">
@@ -25,7 +23,7 @@ const Text = ({ inputText, setInputText, handleSendInfo }) => {
         placeholder="Type or paste your text here!"
         value={inputText}
         onChange={handleChange}
-        // onKeyDown={handleKeyPress}
+        onKeyDown={handleKeyPress}
         rows={4}
         aria-label="Text input"
       />

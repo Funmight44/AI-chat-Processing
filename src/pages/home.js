@@ -165,6 +165,8 @@ import { v4 } from "uuid";
   }
    return (
      <div className="container">
+       <h1>AI Text Processor</h1>
+
        <ChatInterFace infos={infos}  summarize={summarize}  translate={translate} detectedLang={detectedLang} error={error} loading={loading} />
        <Text inputText={inputText} setInputText={setInputText} handleSendInfo={handleSendInfo} />
      </div>
